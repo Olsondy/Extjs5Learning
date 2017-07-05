@@ -16,4 +16,4 @@
 
 #package 创建规则及原理
 ###结构如下图
-![resource目录结构](https://github.com/javady/ExtjsLearning/blob/master/1081499261754_.pic.jpg?raw=true)
+![image](1.jpg)
