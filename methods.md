@@ -1,30 +1,16 @@
-# Defining Methods
+#ExtJs5.x Mvc 开发介绍
+-------
+##目录
 
-Methods allow you to smoothly display code examples in different languages.
+[TOC]
 
-{% method %}
-## My first method
+##
+项目使用springMvc + Extjs5x,主要介绍前后端交互以及界面组件的mvc模式简单搭建使用,
+开发同事可以通过阅读本文档来帮助开发。更多`examples`请参考 [Extjs5.0 examples](http://examples.sencha.com/extjs/5.0.0/examples/kitchensink/)
 
-My first method exposes how to print a message in JavaScript and Go.
+##大纲
+>* 用户模块
 
-{% sample lang="js" %}
-Here is how to print a message to `stdout` using JavaScript.
 
-```js
-console.log('My first method');
-```
-
-{% sample lang="go" %}
-Here is how to print a message to `stdout` using Go.
-
-```go
-fmt.Println("My first method")
-```
-
-{% common %}
-Whatever language you are using, the result will be the same.
-
-```bash
-$ My first method
-```
-{% endmethod %}
+##接口调用地址
+ * ![Aaron Swartz](https://raw.githubusercontent.com/smshen/MarkdownPhotos/master/Res/test.jpg)
