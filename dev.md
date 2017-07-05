@@ -1,4 +1,4 @@
-#ExtJs5.x Mvc Example 开发文档
+#ExtJs5.x Mvc Example 学习文档介绍
 -------
 ##Catalog
 
