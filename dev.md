@@ -8,7 +8,6 @@
 开发同事可以通过阅读本文档来帮助开发。更多`examples`请参考 [Extjs5.0 examples](http://examples.sencha.com/extjs/5.0.0/examples/kitchensink/)
 
 ## Introduction
->* User 模块
 >* package 创建规则及原理
 >* resource 压缩使用方法
 >* ext 处理国际化、权限控制等使用方法
