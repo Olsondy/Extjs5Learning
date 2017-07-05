@@ -16,4 +16,4 @@
 
 #package 创建规则及原理
 ###结构如下图
-![image](1.jpg)
+![image](images/1.jpg)
