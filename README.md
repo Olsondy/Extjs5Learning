@@ -1,4 +1,4 @@
-## Extjs5.x 学习文档介绍
+## Extjs5.x 学习文档大纲
 >* User 模块
 >* package 创建规则及原理
 >* resource 压缩使用方法
