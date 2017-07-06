@@ -17,4 +17,4 @@
 # package 创建规则及原理
 ### 结构如下图
 ![image](images/package.png)
-    * PS : 详细说明请查看基础平台文档
+  * PS : 原理请查看基础平台filter的实现原理文档
