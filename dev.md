@@ -48,4 +48,18 @@
 	```
 	* `<ext:module>` 标签
 * wro.xml压缩文件配置
-	* wro.properties
+	* wro.xml添加js引用地址
+	```xml
+	<?xml version="1.0" encoding="UTF-8"?>
+	<groups xmlns="http://www.isdc.ro/wro"
+	        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	        xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
+	    <group name="table">
+	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ext-hoau.js</js>
+	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ty-util.js</js>
+	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/commonSelector.js</js>
+	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/common.js</js>
+	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/table/tableApp.js</js>
+	    </group>
+	</groups>
+	```
