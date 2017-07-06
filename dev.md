@@ -41,6 +41,5 @@
 		    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 		    <ext:module groups="table" subModule="table"/>
 		</head>
-<body>
 	```
 * wro.xml压缩文件配置
