@@ -25,55 +25,55 @@
   >* PS : 原理请查看基础平台filter的实现原理文档
 
 # wro4j & ExtJs 压缩、合并js
->* pom.xml的配置
+>##pom.xml的配置
 	* 只需在当前模块的pom.xml中配置如下代码
-	```xml
-		<build>
-	        <plugins>
-	            <plugin>
-	                <groupId>ro.isdc.wro4j</groupId>
-	                <artifactId>wro4j-maven-plugin</artifactId>
-	            </plugin>
-	        </plugins>
-		</build>
-	```
-* jsp中ext的配置
+		```xml
+			<build>
+		        <plugins>
+		            <plugin>
+		                <groupId>ro.isdc.wro4j</groupId>
+		                <artifactId>wro4j-maven-plugin</artifactId>
+		            </plugin>
+		        </plugins>
+			</build>
+		```
+## jsp中ext的配置
 	* 在页面文件的head块中添加`<ext:module/>`标签,来进行extjs压缩
-	```javascript
-		<head>
-		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-		    <ext:module groups="table" subModule="table"/>
-		</head>
-	```
+		```javascript
+			<head>
+			    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+			    <ext:module groups="table" subModule="table"/>
+			</head>
+		```
 	* `<ext:module>` 标签
-* wro.xml压缩文件配置
+## wro.xml压缩文件配置
 	* wro.xml添加js加载地址
-	```xml
-	<?xml version="1.0" encoding="UTF-8"?>
-	<groups xmlns="http://www.isdc.ro/wro"
-	        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	        xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
-	    <group name="table">
-	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ext-hoau.js</js>
-	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ty-util.js</js>
-	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/commonSelector.js</js>
-	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/common.js</js>
-	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/table/tableApp.js</js>
-	    </group>
-	</groups>
-	```
-	* 配置wro4j相关属性，新建wro.properties，配置属性含义参见:[Java Web程序使用wro4j合并、压缩js、css等静态资源](http://everycoding.com/coding/68.html),例如配置内容为：
-	```java
-		managerFactoryClassName=ro.isdc.wro.manager.factory.ConfigurableWroManagerFactory
-		preProcessors=semicolonAppender,cssMinJawr
-		gzipResources=true
-		encoding=UTF-8
-		postProcessors=cssVariables,jsMin
-		uriLocators=servletContext,uri,classpath
-		hashStrategy=MD5
-		namingStrategy=hashEncoder-CRC32
-	```
+		```xml
+		<?xml version="1.0" encoding="UTF-8"?>
+		<groups xmlns="http://www.isdc.ro/wro"
+		        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		        xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
+		    <group name="table">
+		        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ext-hoau.js</js>
+		        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ty-util.js</js>
+		        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/commonSelector.js</js>
+		        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/common.js</js>
+		        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/table/tableApp.js</js>
+		    </group>
+		</groups>
+		```
+	* 配置wro4j相关属性，新建wro.properties，属性含义参见:[Java Web程序使用wro4j合并、压缩js、css等静态资源](http://everycoding.com/coding/68.html)
+		```java
+			managerFactoryClassName=ro.isdc.wro.manager.factory.ConfigurableWroManagerFactory
+			preProcessors=semicolonAppender,cssMinJawr
+			gzipResources=true
+			encoding=UTF-8
+			postProcessors=cssVariables,jsMin
+			uriLocators=servletContext,uri,classpath
+			hashStrategy=MD5
+			namingStrategy=hashEncoder-CRC32
+		```
 * *更多参考[Maven插件wro4j-maven-plugin压缩、合并js、css详解](http://www.everycoding.com/coding/67.html)*
 
 # ext 处理国际化、权限控制等使用介绍
