@@ -9,7 +9,7 @@
 
 ## Introduction
 >* package 创建规则及原理
-* js 压缩使用介绍
+* wro4j & extjs 压缩、合并js
 * ext 处理国际化、权限控制等使用介绍
 * Extjs5.x Mvc模式及组件介绍
 * 分页插件集成
@@ -24,7 +24,7 @@
 
   >* PS : 原理请查看基础平台filter的实现原理文档
 
-# js 压缩使用方法
+# wro4j & ExtJs 压缩、合并js
 >* pom.xml的配置
 	* 只需在当前模块的pom.xml中配置如下代码
 	```xml
@@ -46,4 +46,6 @@
 		    <ext:module groups="table" subModule="table"/>
 		</head>
 	```
+	* `<ext:module>` 标签
 * wro.xml压缩文件配置
+	* wro.properties
