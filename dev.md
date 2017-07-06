@@ -48,7 +48,7 @@
 	```
 	* `<ext:module>` 标签
 * wro.xml压缩文件配置
-	* wro.xml添加js引用地址
+	* wro.xml添加js加载地址
 	```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<groups xmlns="http://www.isdc.ro/wro"
@@ -63,3 +63,16 @@
 	    </group>
 	</groups>
 	```
+	* 配置wro4j相关属性，新建wro.properties，例如配置内容为：
+	```java
+		managerFactoryClassName=ro.isdc.wro.manager.factory.ConfigurableWroManagerFactory
+		preProcessors=semicolonAppender,cssMinJawr
+		gzipResources=true
+		encoding=UTF-8
+		postProcessors=cssVariables,jsMin
+		uriLocators=servletContext,uri,classpath
+		hashStrategy=MD5
+		namingStrategy=hashEncoder-CRC32
+	```
+		* 配置属性含义参见：http://everycoding.com/coding/68.html
+* 参考[Maven插件wro4j-maven-plugin压缩、合并js、css详解](http://www.everycoding.com/coding/67.html)
