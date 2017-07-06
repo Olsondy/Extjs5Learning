@@ -7,6 +7,7 @@
 项目使用springMvc + Extjs5x,主要介绍前后端交互以及界面组件的mvc模式简单搭建使用,
 开发同事可以通过阅读本文档来帮助开发。更多`examples`请参考 [Extjs 5.0 examples](http://examples.sencha.com/extjs/5.0.0/examples/kitchensink/)
 
+----
 ## Introduction
 >* package 创建规则及原理
 * resource 压缩使用方法
