@@ -26,6 +26,7 @@
 # resource 压缩使用方法
 >* pom.xml的配置
   * 只需在当前模块的pom中配置如下代码
+    
     ```xml
 	    <build>
 	      <plugins>
@@ -36,6 +37,7 @@
 	      </plugins>
 	  </build>
     ```
+    
 * jsp中ext的配置
 	* jsp中的ext标签写法
 * wro.xml压缩文件配置
