@@ -15,6 +15,7 @@
 * Extjs5.x Mvc模式及组件介绍
 * 分页插件集成
 
+----
 # package 创建规则及原理
 ### 结构如下图
 ![image](images/package.png)
