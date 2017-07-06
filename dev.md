@@ -17,7 +17,11 @@
 
 # package 创建规则及原理
 ### 结构如下图
-![image](images/package.png)
+
+<div style='width:500;'>
+  <img src='images/package.png'/>
+</div>
+
   >* PS : 原理请查看基础平台filter的实现原理文档
 
 # js 压缩使用方法
