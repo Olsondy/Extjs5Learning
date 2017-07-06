@@ -1,6 +1,6 @@
-#ExtJs5.x Example 学习文档
+# ExtJs5.x Example 学习文档
 -------
-##Catalog
+## Catalog
 
 [TOC]
 
@@ -14,7 +14,7 @@
 * Extjs5.x Mvc模式及组件介绍
 * 分页插件集成
 
-#package 创建规则及原理
-###结构如下图
+# package 创建规则及原理
+### 结构如下图
 ![image](images/package.png)
     * PS : 详细说明请查看基础平台文档
