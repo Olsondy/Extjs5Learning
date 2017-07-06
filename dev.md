@@ -38,7 +38,7 @@
 		</build>
 	```
 * jsp中ext的配置
-	* 在页面文件的head块中添加`<ext:module/>`标签,来进行extjs压缩的
+	* 在页面文件的head块中添加`<ext:module/>`标签,来进行extjs压缩
 	```javascript
 		<head>
 		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
