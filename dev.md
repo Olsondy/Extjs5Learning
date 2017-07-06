@@ -27,14 +27,14 @@
 >* pom.xml的配置
   * 只需在当前模块的pom中配置如下代码
     ```xml
-    <build>
-      <plugins>
-          <plugin>
-              <groupId>ro.isdc.wro4j</groupId>
-              <artifactId>wro4j-maven-plugin</artifactId>
-          </plugin>
-      </plugins>
-  </build>
+	    <build>
+	      <plugins>
+	          <plugin>
+	              <groupId>ro.isdc.wro4j</groupId>
+	              <artifactId>wro4j-maven-plugin</artifactId>
+	          </plugin>
+	      </plugins>
+	  </build>
     ```
 * jsp中ext的配置
   *
