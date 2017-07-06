@@ -16,7 +16,7 @@
 * 开发中的一些补充说明
 
 # package 创建规则及原理
-### 结构如下图
+## 结构如下图
 
 <div align = 'center' style='width:500px;'>
   <img src='images/package.png'/>
@@ -84,9 +84,14 @@
 		<body></body>
 		</html>
 	```
+	* `ModuleInterceptor`拦截器在每次请求中设置了请求模块名称
+>## js中的使用权限,国际化函数
 
->## js中的定义
-	```javascript
-	
-	```
-* 原理介绍:`<ext:module>` 标签,在`framework-server.jar`自定义的`taglib(ext.tld)`中配置了`<name>module</name>`的标签,servlet容器初始化时,初始化每个jsp的taglib,会调用指向的`tag-class`ModuleForJsTag.java中的实现方法,在相应的jsp页面生成权限,国际化的javascript代码
+<div align = 'center' style='width:500px;'>
+  <img src='images/extjs-01.png'/>
+</div>
+
+>* 原理介绍`<ext:module/>` 标签,在`framework-server.jar`自定义的`taglib(ext.tld)`中配置了`<name>module</name>`的标签,servlet容器初始化时,初始化每个jsp的taglib,会调用指向的`tag-class`ModuleForJsTag.java中的实现方法,在相应的jsp页面生成权限,国际化的javascript代码
+* isPermission()函数和i18n()函数介绍,
+	* `isPermission`会在前端的每个请求中通过`SecurityInterceptor`去拦截当前用户是否有定义的权限值.
+	* `i18n`在每个拦截器
