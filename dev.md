@@ -75,6 +75,6 @@
 		namingStrategy=hashEncoder-CRC32
 	```
 		* 配置属性含义参见:[Java Web程序使用wro4j合并、压缩js、css等静态资源](http://everycoding.com/coding/68.html)
-* 参考[Maven插件wro4j-maven-plugin压缩、合并js、css详解](http://www.everycoding.com/coding/67.html)
+* *更多参考[Maven插件wro4j-maven-plugin压缩、合并js、css详解](http://www.everycoding.com/coding/67.html)*
 
 # ext 处理国际化、权限控制等使用介绍
