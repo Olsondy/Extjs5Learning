@@ -25,7 +25,7 @@
 ----
 # resource 压缩使用方法
 >* pom.xml的配置
-	* 只需在当前模块的pom中配置如下代码
+	* 只需在当前模块的pom.xml中配置如下代码
 	```xml
 		<build>
 	        <plugins>
