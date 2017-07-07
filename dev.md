@@ -16,7 +16,7 @@
 # package 创建规则及原理
 ## 结构如下图
 
-<div align = 'center' style='width:200px;'>
+<div align = 'center' style='width:500px;'>
   <img src='images/package.png'/>
 </div>
 
