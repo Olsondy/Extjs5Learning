@@ -1,0 +1,722 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: rgb(247, 247, 247);
+  color: #abb2bf;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+table {
+  border-collapse:collapse;
+}
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}</style><title>dev</title></head><body><article class="markdown-body"><h1 id="extjs5x-example"><a name="user-content-extjs5x-example" href="#extjs5x-example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ExtJs5.x Example 学习文档</h1>
+<h2 id="catalog"><a name="user-content-catalog" href="#catalog" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Catalog</h2>
+<div class="toc">
+<ul>
+<li><a href="#extjs5x-example">ExtJs5.x Example 学习文档</a><ul>
+<li><a href="#catalog">Catalog</a></li>
+<li><a href="#introduction">Introduction</a></li>
+</ul>
+</li>
+<li><a href="#package">package 创建规则及原理</a><ul>
+<li><a href="#_1">结构如下图</a></li>
+</ul>
+</li>
+<li><a href="#wro4j-extjs-js">wro4j &amp; ExtJs 压缩、合并js</a><ul>
+<li><a href="#pomxml">pom.xml的配置</a></li>
+<li><a href="#wroxml">使用wro.xml压缩文件配置</a></li>
+</ul>
+</li>
+<li><a href="#ext">ext 处理国际化、权限控制等使用介绍</a><ul>
+<li><a href="#jspext">jsp中ext标签库</a></li>
+<li><a href="#js">js中使用权限,国际化函数</a></li>
+<li><a href="#_2">原理介绍</a></li>
+</ul>
+</li>
+<li><a href="#extjs5x-mvc">Extjs5.x Mvc开发模式及组件介绍</a><ul>
+<li><a href="#mvc">Mvc开发模式文件结构</a></li>
+<li><a href="#_3">组件介绍</a><ul>
+<li><a href="#tableappjs">tableApp.js应用程序主入口</a></li>
+<li><a href="#tablecontrollerjs">tableController.js 控制器</a></li>
+<li><a href="#tablestorejs">tableStore.js 数据源</a></li>
+<li><a href="#tablemodeljs">tableModel.js模型</a></li>
+<li><a href="#viewportjs">Viewport.js 视图容器</a></li>
+<li><a href="#formpanelgridpanel">界面视图组件:FormPanel,GridPanel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_4">注意事项</a></li>
+</ul>
+</div>
+<p>项目使用springMvc + Extjs5x,主要介绍前后端交互以及界面组件的mvc模式简单搭建使用,<br />
+开发同事可以通过阅读本文档来帮助开发。更多<code>examples</code>请参考 <a href="http://examples.sencha.com/extjs/5.0.0/examples/kitchensink/">Extjs 5.0 examples</a></p>
+<h2 id="introduction"><a name="user-content-introduction" href="#introduction" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Introduction</h2>
+<blockquote>
+<ul>
+<li>package 创建规则</li>
+<li>wro4j &amp; extjs 压缩、合并js</li>
+<li>ext 处理国际化、权限控制等使用介绍</li>
+<li>Extjs5.x Mvc模式及组件介绍</li>
+</ul>
+</blockquote>
+<h1 id="package"><a name="user-content-package" href="#package" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>package 创建规则及原理</h1>
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>结构如下图</h2>
+<div align = 'center' style='width:500px;'>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/package.png?raw=true'/>
+</div>
+
+<blockquote>
+<ul>
+<li>原理请查看基础平台filter的实现原理文档</li>
+</ul>
+</blockquote>
+<h1 id="wro4j-extjs-js"><a name="user-content-wro4j-extjs-js" href="#wro4j-extjs-js" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>wro4j &amp; ExtJs 压缩、合并js</h1>
+<h2 id="pomxml"><a name="user-content-pomxml" href="#pomxml" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>pom.xml的配置</h2>
+<ul>
+<li>只需在当前模块的pom.xml中配置如下代码<br />
+<pre><code class="xml">    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;ro.isdc.wro4j&lt;/groupId&gt;
+                &lt;artifactId&gt;wro4j-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+</code></pre></li>
+</ul>
+<h2 id="wroxml"><a name="user-content-wroxml" href="#wroxml" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>使用wro.xml压缩文件配置</h2>
+<ul>
+<li>压缩当前scripts文件夹下的相关js</li>
+</ul>
+<div align = 'center' style='width:600px;'>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-01.png?raw=true'/>
+</div>
+
+<ul>
+<li>
+<p>wro.xml添加js加载地址<br />
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;groups xmlns=&quot;http://www.isdc.ro/wro&quot;
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xsi:schemaLocation=&quot;http://www.isdc.ro/wro wro.xsd&quot;&gt;
+
+    &lt;group name=&quot;table&quot;&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/common/server/META-INF/scripts/ext-hoau.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/common/server/META-INF/scripts/ty-util.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/common/server/META-INF/scripts/commonSelector.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/common/server/META-INF/scripts/common.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/tableApp.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/controller/tableController.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/model/tableModel.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/store/tableStore.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/Viewport.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableSearchForm.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableGrid.js&lt;/js&gt;
+        &lt;js&gt;classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableAddWindow.js&lt;/js&gt;
+    &lt;/group&gt;
+&lt;/groups&gt;
+</code></pre></p>
+</li>
+<li>
+<p>配置wro4j相关属性，新建wro.properties，属性含义参见<a href="http://everycoding.com/coding/68.html">Java Web程序使用wro4j合并、压缩js、css等静态资源</a><br />
+    <pre><code class="java">    managerFactoryClassName=ro.isdc.wro.manager.factory.ConfigurableWroManagerFactory
+    preProcessors=semicolonAppender,cssMinJawr
+    gzipResources=true
+    encoding=UTF-8
+    postProcessors=cssVariables,jsMin
+    uriLocators=servletContext,uri,classpath
+    hashStrategy=MD5
+    namingStrategy=hashEncoder-CRC32
+</code></pre></p>
+</li>
+<li>
+<p><em>更多参考<a href="http://www.everycoding.com/coding/67.html">Maven插件wro4j-maven-plugin压缩、合并js、css详解</a></em></p>
+</li>
+</ul>
+<h1 id="ext"><a name="user-content-ext" href="#ext" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ext 处理国际化、权限控制等使用介绍</h1>
+<h2 id="jspext"><a name="user-content-jspext" href="#jspext" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>jsp中ext标签库</h2>
+<ul>
+<li>标签库的定义,如下图</li>
+</ul>
+<div align = 'center' style='width:900px;'>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-02.png?raw=true'/>
+</div>
+
+<ul>
+<li>
+<p>在页面文件的head块中添加<code>&lt;ext:module/&gt;</code>,<code>&lt;ext:permission/&gt;</code>标签<br />
+<pre><code class="javascript">    &lt;%@ page language=&quot;java&quot;  pageEncoding=&quot;UTF-8&quot; contentType=&quot;text/html; charset=UTF-8&quot;%&gt;
+    &lt;%@taglib uri=&quot;/ext&quot; prefix=&quot;ext&quot; %&gt;
+    &lt;!DOCTYPE HTML&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+        &lt;META HTTP-EQUIV=&quot;CACHE-CONTROL&quot; CONTENT=&quot;NO-CACHE&quot;&gt;
+        &lt;%@include file=&quot;common.jsp&quot;%&gt;
+        &lt;ext:module groups=&quot;table&quot; subModule=&quot;table&quot;/&gt;
+        &lt;%--权限url配置集合--%&gt;
+        &lt;ext:permission urls=&quot;/table/addButton,
+        /table/updateButton,
+        /table/deleteButton&quot;/&gt;
+    &lt;/head&gt;
+    &lt;body&gt;&lt;/body&gt;
+    &lt;/html&gt;
+</code></pre></p>
+<ul>
+<li><code>&lt;ext:module/&gt;</code>标签用来生成加载压缩后的js代码引用</li>
+<li><code>&lt;ext:permission/&gt;</code>标签用来加载相应权限url集合,在每次操作界面请求时会请求到拦截器校验是否包含当前url的权限</li>
+</ul>
+<h2 id="js"><a name="user-content-js" href="#js" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>js中使用权限,国际化函数</h2>
+</li>
+</ul>
+<div align = 'center' style='width:900px;'>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-03.png?raw=true'/>
+</div>
+
+<ul>
+<li>注意:如果未使用压缩js代码,则ext taglib相关函数不会生效,原因是因为js代码被压缩到了<code>&lt;ext:module/&gt;</code>标签生成的javascrip中</li>
+</ul>
+<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>原理介绍</h2>
+<ul>
+<li>配置了ext taglib标签后在jsp中生成的结果如图</li>
+</ul>
+<div align = 'center' style='width:900px;'>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-04.png?raw=true'/>
+</div>
+
+<ul>
+<li>在<code>framework-server.jar</code>自定义的<code>taglib(ext.tld)</code>中配置了<code>&lt;name&gt;module&lt;/name&gt;</code>的标签,servlet容器初始化时,初始化每个jsp的taglib,会调用指向的<code>tag-class</code>标签对应的tag处理类isPermission()函数和i18n()函数实现方法请参考<code>ext.tld</code>中相关的实现如下图</li>
+</ul>
+<div align = 'center' style='width:900px;'>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-05.png?raw=true'/>
+</div>
+
+<h1 id="extjs5x-mvc"><a name="user-content-extjs5x-mvc" href="#extjs5x-mvc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Extjs5.x Mvc开发模式及组件介绍</h1>
+<h2 id="mvc"><a name="user-content-mvc" href="#mvc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mvc开发模式文件结构</h2>
+<div align = 'center' style='width:600px;'>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-06.png?raw=true'/>
+</div>
+
+<ul>
+<li>application,controller,model,store,view结构介绍(以demo为例),<ul>
+<li><code>application</code>  创建tableApp.js 作为我们程序的入口文件<br />
+<div align = 'center' style='width:900px;'><br />
+  <img src="/Users/dy/GitBook/Library/javady/extjs5-mvc-learning/images/extjs-07.png"/><br />
+</div></li>
+<li>创建<code>controller</code> 存放作为我们的处理请求的控制器的js文件<br />
+<div align = 'center' style='width:900px;'><br />
+  <img src="/Users/dy/GitBook/Library/javady/extjs5-mvc-learning/images/extjs-08.png"/><br />
+</div></li>
+<li>创建<code>store</code> 存放作为数据源的绑定的js文件<br />
+<div align = 'center' style='width:900px;'><br />
+  <img src="/Users/dy/GitBook/Library/javady/extjs5-mvc-learning/images/extjs-09.png"/><br />
+</div></li>
+<li>创建<code>model</code> 存放作为数据模型映射的js文件<br />
+<div align = 'center' style='width:900px;'><br />
+  <img src="/Users/dy/GitBook/Library/javady/extjs5-mvc-learning/images/extjs-10.png"/><br />
+</div></li>
+<li>创建<code>view</code> 存放展示界面的视图js文件<br />
+<div align = 'center' style='width:900px;'><br />
+  <img src="/Users/dy/GitBook/Library/javady/extjs5-mvc-learning/images/extjs-11.png"/><br />
+</div></li>
+</ul>
+</li>
+</ul>
+<h2 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>组件介绍</h2>
+<h3 id="tableappjs"><code>tableApp.js</code>应用程序主入口</h3>
+<pre><code class="javascript">Ext.application({
+    name: &quot;tableDemo&quot;,  //设定应用程序的命名空间(它将是controller,view.model和store的命名空间)
+    appFolder: '../scripts/table/tableDemo',//设定应用程序的路径
+    controllers: [&quot;tableController&quot;], //加载应用程序所用到的所有controller ---文件名
+    autoCreateViewport: true,  //开启自动创建Viewport,它将自动去view目录下查找Viewport文件并实例化
+    launch: function () {}
+})
+</code></pre>
+
+<ul>
+<li>appFolder属性是用于加载当前javascript应用的路径,js在次文件路径下声明可实现相互引用</li>
+</ul>
+<h3 id="tablecontrollerjs"><code>tableController.js</code> 控制器</h3>
+<pre><code class="javascript">Ext.define('tableDemo.controller.tableController', {
+    extend: 'Ext.app.Controller',
+    stores: ['tableStore'],  //加载store模块  -&gt;文件名
+    models: ['tableModel'],  //加载model模块  -&gt;文件名
+    views: ['Viewport','tableDemoView.tableSearchForm', 'tableDemoView.tableGrid','tableDemoView.tableAddWindow'], 
+    init: function () {
+        this.control({
+            'tableGrid button[action=add]': {   //ext的 dom 属性查询方法找到相应按钮
+                click: this.addCustomerInfoWin
+            },
+        });
+}
+</code></pre>
+
+<ul>
+<li><code>stores</code>属性可以声明引用<code>appFolder</code>定义的路径下store文件夹的js文件</li>
+<li><code>models</code>则类似,也是引用定义路径下的model文件夹的js文件</li>
+<li><code>views</code> 属性,加载所需的视图组件, 写法规则为view路径下的 文件夹/文件名</li>
+<li><code>init</code> 一个初始化方法,初始化当前所有定义的钩子方法</li>
+</ul>
+<h3 id="tablestorejs"><code>tableStore.js</code> 数据源</h3>
+<pre><code class="javascript">Ext.define(&quot;tableDemo.store.tableStore&quot;, {
+    extend: &quot;Ext.data.Store&quot;,
+    model: &quot;tableDemo.model.tableModel&quot;,
+    pageSize : 15,
+    proxy: {
+        type: 'ajax',
+        url: 'queryCustomerByPaging',
+        reader: {
+            type: 'json',
+            rootProperty: 'result.customerDtoList',
+            totalProperty: 'result.totalCount'
+        }
+    },
+    listeners : {
+        'beforeload' : function(store, operation, eOpts) {
+            var queryForm = Ext.getCmp('tableViewId').getSearchForm().getForm();
+            if (!Ext.isEmpty(queryForm)) {
+                var params = {   //封装请求参数
+                    'customerDto.accountCode' : queryForm.findField('accountCode').getValue(),
+                    'customerDto.industryCode' : queryForm.findField('industryCode').getValue(),
+                    'customerDto.enterpriseType' : queryForm.findField('enterpriseType').getValue(),
+                    'customerDto.enterpriseName' : queryForm.findField('enterpriseName').getValue(),
+                    'startDate' : queryForm.findField('startDate').getValue(),
+                    'endDate' : queryForm.findField('endDate').getValue()
+                };
+                Ext.apply(store.proxy.extraParams, params);
+            }
+        }
+    },
+    autoLoad: false
+})
+</code></pre>
+
+<ul>
+<li>参考Extjs store类属性介绍<a href="http://docs.sencha.com/extjs/5.0.1/api/Ext.data.Store.html">Store</a></li>
+<li><code>rootProperty</code>是后端返回的数组对象,</li>
+<li><code>totalProperty</code>是后端返回的数据总数</li>
+</ul>
+<h3 id="tablemodeljs"><code>tableModel.js</code>模型</h3>
+<pre><code class="javascript">Ext.define('tableDemo.model.tableModel', {
+    extend: 'Ext.data.Model',
+    fields: [
+        { name: 'id'},
+        { name: 'enterpriseName'},//客户企业全称
+        { name: 'accountCode'},//客户账号
+        { name: 'enterpriseType'},//企业性质
+        { name: 'detailAddress'},//详细地址
+        { name: 'industryCode'},//所属行业
+        { name: 'createDate', type : 'date', dateFormat:'time'},//创建时间
+        { name: 'createUser'},//创建人
+        { name: 'modifyDate', type : 'date', dateFormat:'time'},//创建时间
+        { name: 'modifyUser'}//修改人
+
+    ]
+})
+</code></pre>
+
+<ul>
+<li>fields 定义映射的数据模型,和后台的实体字段对应,<ul>
+<li>在field数组对象属性中,每个对象相关name对象实体的字段,也可声明<code>mapping</code>属性,进行复杂的关联映射<br />
+    <pre><code class="javascript">    Ext.define('crm.model.Customer', {
+    extend: 'Ext.data.Model',
+    fields: [
+        { name: 'id'},
+        { name: 'enterpriseName'},//客户企业全称
+        { name: 'contactName', mapping: 'contactDto.contactName'}//主联系人姓名
+    ]
+})
+</code></pre></li>
+<li>对应的java类映射<br />
+    <pre><code class="java">public class CustomerDto {
+
+    private ContactDto contactDto;
+
+}
+</code></pre></li>
+<li>json结果<br />
+    <pre><code>{
+    customerDto : {
+        contactDto : {
+            &quot;contactName&quot;:'联系人名称'
+        }
+    }
+}
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h3 id="viewportjs"><code>Viewport.js</code> 视图容器</h3>
+<pre><code class="javascript">Ext.define(&quot;tableDemo.view.Viewport&quot;, {
+    id : 'tableViewId',
+    extend: &quot;Ext.container.Viewport&quot;,
+    layout: &quot;border&quot;,   //extjs的boder布局
+    items: [{
+        xtype:&quot;tableSearchForm&quot;
+    },{
+        xtype:&quot;tableGrid&quot;
+    }],
+    getSearchForm : function(){
+        return this.items.get(0);    //获取当前view面板的 第一个item -&gt; 查询表单
+    },
+    getTableGrid : function(){
+        return this.items.get(1);   //获取当前view面板的 第二个item -&gt; 表格
+    }
+})
+</code></pre>
+
+<ul>
+<li>定义视图类,在<code>tableApp.js</code>中的autoCreateViewport属性会自动创建当前item属性的视图组件,组件的类型已组件别名引用</li>
+</ul>
+<h3 id="formpanelgridpanel"><a name="user-content-formpanelgridpanel" href="#formpanelgridpanel" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>界面视图组件:FormPanel,GridPanel</h3>
+<ul>
+<li>
+<p><code>FormPanel</code>介绍<br />
+<pre><code class="javascript">Ext.define(&quot;tableDemo.view.tableDemoView.tableSearchForm&quot;, {
+    extend : &quot;Ext.form.Panel&quot;,
+    alias : 'widget.tableSearchForm',
+    width : '100%',
+    height : 120,
+    layout : 'column',
+    region : 'north', //基于border布局的使用
+    defaults : {
+        msgTarget : 'qtip',
+        margin: '15 10 5 0',
+        labelWidth : 100,
+        columnWidth : 0.25,
+        labelAlign : 'right'
+    },
+    defaultType : 'textfield',
+    items : []
+})
+</code></pre></p>
+<ul>
+<li>defaults 属性对象中设置 form表单子组件的宽度,对齐方式,以及间距等布局设计</li>
+<li>更多 formPanel 属性方法 参考<a href="http://docs.sencha.com/extjs/5.0.1/api/Ext.form.Panel.html">Panel</a></li>
+</ul>
+</li>
+<li>
+<p><code>GridPanel</code>和<code>Store</code>配合的分页组件<br />
+<pre><code class="javascript">Ext.define(&quot;tableDemo.view.tableDemoView.tableGrid&quot;, {
+    extend: &quot;Ext.grid.Panel&quot;,
+    alias: 'widget.tableGrid',
+    store: &quot;tableStore&quot;,
+    region: 'center',
+    width: '100%',
+    emptyText: '查询结果为空',
+    viewConfig: {
+        enableTextSelection: true
+    },
+    columns: {
+        defaults: {
+            align: 'left'
+        },
+        items: []            
+    },
+    pagingToolbar: null,
+    getPagingToolbar: function () {
+        if (this.pagingToolbar == null) {
+            this.pagingToolbar = Ext.create('Ext.toolbar.Paging', {
+                store: this.store,
+                dock: 'bottom',
+                displayInfo: true
+            });
+        }
+        return this.pagingToolbar;
+    },
+    constructor: function (config) {
+        var me = this, cfg = Ext.apply({}, config);
+        me.bbar = me.getPagingToolbar();
+        me.callParent([cfg]);
+    }
+})
+</code></pre></p>
+<ul>
+<li>store属性加载store文件夹中相应的Store类名称</li>
+<li>pagingToolbar对象是分页工具栏组件,属性详解参考<a href="http://docs.sencha.com/extjs/5.0.1/api/Ext.toolbar.Paging.html">Paging</a></li>
+<li>获取数据时.可以获得当前grid面板的分页组件的方法直接获取数据 <code>getTableGrid().getPagingToolbar().moveFirst()</code>或者执行store的刷新<code>getTableGrid().getStore().reload()</code></li>
+</ul>
+</li>
+<li>
+<p>更多参考 <a href="http://www.qeefee.com/article/extjs-mvc-in-detail">Extjs MVC开发模式详解</a></p>
+</li>
+</ul>
+<h1 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>注意事项</h1>
+<ul>
+<li>在view视图定义是,根据情况需定义view类的别名,在每个类的<code>alias</code>属性上设置别名即可,</li>
+<li>每个声明的类名称需要和js文件名一致,否则有可能会导致,引用的js加载失败js或者js加载成功但是界面组件生成不了</li>
+</ul></article></body></html>

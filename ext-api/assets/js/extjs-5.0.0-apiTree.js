@@ -1,3 +1,0 @@
-DocsApp.apiTree = {
-    "API": {}
-}
