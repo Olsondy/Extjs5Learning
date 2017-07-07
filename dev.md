@@ -43,28 +43,29 @@
 </div>
 
 >* wro.xml添加js加载地址
-	```xml
-		<?xml version="1.0" encoding="UTF-8"?>
-		<groups xmlns="http://www.isdc.ro/wro"
-		        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		        xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
+```xml
+	<?xml version="1.0" encoding="UTF-8"?>
+	<groups xmlns="http://www.isdc.ro/wro"
+	        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	        xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
 
-		    <group name="table">
-		        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ext-hoau.js</js>
-		        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ty-util.js</js>
-		        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/commonSelector.js</js>
-		        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/common.js</js>
-		        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/tableApp.js</js>
-		        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/controller/tableController.js</js>
-		        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/model/tableModel.js</js>
-		        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/store/tableStore.js</js>
-		        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/Viewport.js</js>
-		        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableSearchForm.js</js>
-		        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableGrid.js</js>
-		        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableAddWindow.js</js>
-		    </group>
-		</groups>
-	```
+	    <group name="table">
+	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ext-hoau.js</js>
+	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ty-util.js</js>
+	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/commonSelector.js</js>
+	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/common.js</js>
+	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/tableApp.js</js>
+	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/controller/tableController.js</js>
+	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/model/tableModel.js</js>
+	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/store/tableStore.js</js>
+	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/Viewport.js</js>
+	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableSearchForm.js</js>
+	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableGrid.js</js>
+	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableAddWindow.js</js>
+	    </group>
+	</groups>
+```
+
 >* 配置wro4j相关属性，新建wro.properties，属性含义参见[Java Web程序使用wro4j合并、压缩js、css等静态资源](http://everycoding.com/coding/68.html)
 	```java
 		managerFactoryClassName=ro.isdc.wro.manager.factory.ConfigurableWroManagerFactory
