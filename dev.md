@@ -23,50 +23,51 @@
   >* 原理请查看基础平台filter的实现原理文档
 
 # wro4j & ExtJs 压缩、合并js
->##pom.xml的配置
->* 只需在当前模块的pom.xml中配置如下代码
-		```xml
-			<build>
-		        <plugins>
-		            <plugin>
-		                <groupId>ro.isdc.wro4j</groupId>
-		                <artifactId>wro4j-maven-plugin</artifactId>
-		            </plugin>
-		        </plugins>
-			</build>
-		```
->## 使用wro.xml压缩文件配置
+##pom.xml的配置
+* 只需在当前模块的pom.xml中配置如下代码
+```xml
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>ro.isdc.wro4j</groupId>
+                <artifactId>wro4j-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+	</build>
+```
+
+## 使用wro.xml压缩文件配置
 * 压缩当前scripts文件夹下的相关js
 
 <div align = 'center' style='width:600px;'>
   <img src='images/extjs-01.png'/>
 </div>
 
->* wro.xml添加js加载地址
+* wro.xml添加js加载地址
 ```xml
-	<?xml version="1.0" encoding="UTF-8"?>
-	<groups xmlns="http://www.isdc.ro/wro"
-	        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	        xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<groups xmlns="http://www.isdc.ro/wro"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
 
-	    <group name="table">
-	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ext-hoau.js</js>
-	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ty-util.js</js>
-	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/commonSelector.js</js>
-	        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/common.js</js>
-	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/tableApp.js</js>
-	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/controller/tableController.js</js>
-	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/model/tableModel.js</js>
-	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/store/tableStore.js</js>
-	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/Viewport.js</js>
-	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableSearchForm.js</js>
-	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableGrid.js</js>
-	        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableAddWindow.js</js>
-	    </group>
-	</groups>
+    <group name="table">
+        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ext-hoau.js</js>
+        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/ty-util.js</js>
+        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/commonSelector.js</js>
+        <js>classpath:com/hoau/framework/module/common/server/META-INF/scripts/common.js</js>
+        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/tableApp.js</js>
+        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/controller/tableController.js</js>
+        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/model/tableModel.js</js>
+        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/store/tableStore.js</js>
+        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/Viewport.js</js>
+        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableSearchForm.js</js>
+        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableGrid.js</js>
+        <js>classpath:com/hoau/framework/module/table/server/META-INF/scripts/tableDemo/view/tableDemoView/tableAddWindow.js</js>
+    </group>
+</groups>
 ```
 
->* 配置wro4j相关属性，新建wro.properties，属性含义参见[Java Web程序使用wro4j合并、压缩js、css等静态资源](http://everycoding.com/coding/68.html)
+* 配置wro4j相关属性，新建wro.properties，属性含义参见[Java Web程序使用wro4j合并、压缩js、css等静态资源](http://everycoding.com/coding/68.html)
 	```java
 		managerFactoryClassName=ro.isdc.wro.manager.factory.ConfigurableWroManagerFactory
 		preProcessors=semicolonAppender,cssMinJawr
@@ -77,66 +78,68 @@
 		hashStrategy=MD5
 		namingStrategy=hashEncoder-CRC32
 	```
+
 * *更多参考[Maven插件wro4j-maven-plugin压缩、合并js、css详解](http://www.everycoding.com/coding/67.html)*
 
 # ext 处理国际化、权限控制等使用介绍
->## jsp中ext标签库
+## jsp中ext标签库
 * 标签库的定义,如下图
 
 <div align = 'center' style='width:900px;'>
   <img src='images/extjs-02.png'/>
 </div>
 
->* 在页面文件的head块中添加`<ext:module/>`,` <ext:permission/>`标签
-	```javascript
-		<%@ page language="java"  pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
-		<%@taglib uri="/ext" prefix="ext" %>
-		<!DOCTYPE HTML>
-		<html>
-		<head>
-		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-		    <%@include file="common.jsp"%>
-		    <ext:module groups="table" subModule="table"/>
-		    <%--权限url配置集合--%>
-		    <ext:permission urls="/table/addButton,
-		    /table/updateButton,
-		    /table/deleteButton"/>
-		</head>
-		<body></body>
-		</html>
-	```
-	*`<ext:module/>`标签用来生成加载压缩后的js代码引用
-	*`<ext:permission/>`标签用来加载相应权限url集合,在每次操作界面请求时会请求到拦截器校验是否包含当前url的权限
->## js中使用权限,国际化函数
+* 在页面文件的head块中添加`<ext:module/>`,` <ext:permission/>`标签
+```javascript
+	<%@ page language="java"  pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+	<%@taglib uri="/ext" prefix="ext" %>
+	<!DOCTYPE HTML>
+	<html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	    <%@include file="common.jsp"%>
+	    <ext:module groups="table" subModule="table"/>
+	    <%--权限url配置集合--%>
+	    <ext:permission urls="/table/addButton,
+	    /table/updateButton,
+	    /table/deleteButton"/>
+	</head>
+	<body></body>
+	</html>
+```
+
+	* `<ext:module/>`标签用来生成加载压缩后的js代码引用
+	* `<ext:permission/>`标签用来加载相应权限url集合,在每次操作界面请求时会请求到拦截器校验是否包含当前url的权限
+## js中使用权限,国际化函数
 
 <div align = 'center' style='width:900px;'>
   <img src='images/extjs-03.png'/>
 </div>
 
->* 注意:如果未使用压缩js代码,则ext taglib相关函数不会生效,原因是因为js代码被压缩到了`<ext:module/>`标签生成的javascrip中
+* 注意:如果未使用压缩js代码,则ext taglib相关函数不会生效,原因是因为js代码被压缩到了`<ext:module/>`标签生成的javascrip中
 
->##原理介绍
->* 配置了ext taglib标签后在jsp中生成的结果如图
+##原理介绍
+* 配置了ext taglib标签后在jsp中生成的结果如图
 
 <div align = 'center' style='width:900px;'>
   <img src='images/extjs-04.png'/>
 </div>
 
->* 在`framework-server.jar`自定义的`taglib(ext.tld)`中配置了`<name>module</name>`的标签,servlet容器初始化时,初始化每个jsp的taglib,会调用指向的`tag-class`标签对应的tag处理类isPermission()函数和i18n()函数实现方法请参考`ext.tld`中相关的实现如下图
+* 在`framework-server.jar`自定义的`taglib(ext.tld)`中配置了`<name>module</name>`的标签,servlet容器初始化时,初始化每个jsp的taglib,会调用指向的`tag-class`标签对应的tag处理类isPermission()函数和i18n()函数实现方法请参考`ext.tld`中相关的实现如下图
 
 <div align = 'center' style='width:900px;'>
   <img src='images/extjs-05.png'/>
 </div>
 
-># Extjs5.x Mvc开发模式及组件介绍
->## Mvc开发模式文件结构
+# Extjs5.x Mvc开发模式及组件介绍
+## Mvc开发模式文件结构
 
 <div align = 'center' style='width:600px;'>
   <img src='images/extjs-06.png'/>
 </div>
->* 更多参考[Extjs MVC开发模式详解](http://www.qeefee.com/article/extjs-mvc-in-detail)
->* application,controller,model,store,view结构介绍(以demo为例),
+
+* application,controller,model,store,view结构介绍(以demo为例),
 	* `application`  创建tableApp.js 作为我们程序的入口文件
 	<div align = 'center' style='width:900px;'>
 	  <img src='images/extjs-07.png'/>
@@ -157,6 +160,7 @@
 	<div align = 'center' style='width:900px;'>
 	  <img src='images/extjs-11.png'/>
 	</div>
+
 ## 组件介绍
 ### `tableApp.js`应用程序主入口
 ```javascript
@@ -368,6 +372,8 @@ Ext.define("tableDemo.view.tableDemoView.tableGrid", {
 	* store属性加载store文件夹中相应的Store类名称
 	* pagingToolbar对象是分页工具栏组件,属性详解参考[Paging](http://10.39.251.182/resources/ext/ext-docs-5.0/apidocs/template.html#!/api/Ext.toolbar.Paging)
 	* 获取数据时.可以获得当前grid面板的分页组件的方法直接获取数据 `getTableGrid().getPagingToolbar().moveFirst()`或者执行store的刷新`getTableGrid().getStore().reload()`
+
+* 更多参考[Extjs MVC开发模式详解](http://www.qeefee.com/article/extjs-mvc-in-detail)
 
 #注意事项
 * 在view视图定义是,根据情况需定义view类的别名,在每个类的`alias`属性上设置别名即可,
