@@ -368,8 +368,9 @@ Ext.define("tableDemo.view.tableDemoView.tableGrid", {
 	* pagingToolbar对象是分页工具栏组件,属性详解参考[Paging](http://10.39.251.182/resources/ext/ext-docs-5.0/apidocs/template.html#!/api/Ext.toolbar.Paging)
 	* 获取数据时.可以获得当前grid面板的分页组件的方法直接获取数据 `getTableGrid().getPagingToolbar().moveFirst()`或者执行store的刷新`getTableGrid().getStore().reload()`
 
-#注意事项: 
-* 在`alias`属性定义别名,每个声明的类名称需要和js文件名一致,否则有可能会导致,引用的js加载失败js或者js加载成功但是界面组件生成不了的问题
+#注意事项
+* 在view视图定义是,根据情况需定义view类的别名,在每个类的`alias`属性上设置别名即可,
+* 每个声明的类名称需要和js文件名一致,否则有可能会导致,引用的js加载失败js或者js加载成功但是界面组件生成不了
 
 
 
