@@ -366,7 +366,7 @@ Ext.define("tableDemo.view.tableDemoView.tableGrid", {
         me.bbar = me.getPagingToolbar();
         me.callParent([cfg]);
     }
-});
+})
 ```
 
 	* store属性加载store文件夹中相应的Store类名称
