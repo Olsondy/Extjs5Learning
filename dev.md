@@ -17,7 +17,7 @@
 ## 结构如下图
 
 <div align = 'center' style='width:500px;'>
-  <img src='images/package.png'/>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/package.png?raw=true'/>
 </div>
 
   >* 原理请查看基础平台filter的实现原理文档
@@ -40,7 +40,7 @@
 * 压缩当前scripts文件夹下的相关js
 
 <div align = 'center' style='width:600px;'>
-  <img src='images/extjs-01.png'/>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-01.png?raw=true'/>
 </div>
 
 * wro.xml添加js加载地址
@@ -86,7 +86,7 @@
 * 标签库的定义,如下图
 
 <div align = 'center' style='width:900px;'>
-  <img src='images/extjs-02.png'/>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-02.png?raw=true'/>
 </div>
 
 * 在页面文件的head块中添加`<ext:module/>`,` <ext:permission/>`标签
@@ -114,7 +114,7 @@
 ## js中使用权限,国际化函数
 
 <div align = 'center' style='width:900px;'>
-  <img src='images/extjs-03.png'/>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-03.png?raw=true'/>
 </div>
 
 * 注意:如果未使用压缩js代码,则ext taglib相关函数不会生效,原因是因为js代码被压缩到了`<ext:module/>`标签生成的javascrip中
@@ -123,20 +123,20 @@
 * 配置了ext taglib标签后在jsp中生成的结果如图
 
 <div align = 'center' style='width:900px;'>
-  <img src='images/extjs-04.png'/>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-04.png?raw=true'/>
 </div>
 
 * 在`framework-server.jar`自定义的`taglib(ext.tld)`中配置了`<name>module</name>`的标签,servlet容器初始化时,初始化每个jsp的taglib,会调用指向的`tag-class`标签对应的tag处理类isPermission()函数和i18n()函数实现方法请参考`ext.tld`中相关的实现如下图
 
 <div align = 'center' style='width:900px;'>
-  <img src='images/extjs-05.png'/>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-05.png?raw=true'/>
 </div>
 
 # Extjs5.x Mvc开发模式及组件介绍
 ## Mvc开发模式文件结构
 
 <div align = 'center' style='width:600px;'>
-  <img src='images/extjs-06.png'/>
+  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-06.png?raw=true'/>
 </div>
 
 * application,controller,model,store,view结构介绍(以demo为例),
@@ -231,7 +231,7 @@ Ext.define("tableDemo.store.tableStore", {
 })
 ```
 
-* 参考Extjs store类属性介绍[Store](http://10.39.251.182/resources/ext/ext-docs-5.0/apidocs/template.html#!/api/Ext.data.Store)
+* 参考Extjs store类属性介绍[Store](http://docs.sencha.com/extjs/5.0.1/api/Ext.data.Store.html)
 * `rootProperty`是后端返回的数组对象,
 * `totalProperty`是后端返回的数据总数
 
@@ -329,7 +329,7 @@ Ext.define("tableDemo.view.tableDemoView.tableSearchForm", {
 })
 ```
 	* defaults 属性对象中设置 form表单子组件的宽度,对齐方式,以及间距等布局设计
-	* 更多 formPanel 属性方法 参考[Panel](http://10.39.251.182/resources/ext/ext-docs-5.0/apidocs/template.html#!/api/Ext.form.Panel)
+	* 更多 formPanel 属性方法 参考[Panel](http://docs.sencha.com/extjs/5.0.1/api/Ext.form.Panel.html)
 
 
 * `GridPanel`和`Store`配合的分页组件
@@ -370,7 +370,7 @@ Ext.define("tableDemo.view.tableDemoView.tableGrid", {
 ```
 
 	* store属性加载store文件夹中相应的Store类名称
-	* pagingToolbar对象是分页工具栏组件,属性详解参考[Paging](http://10.39.251.182/resources/ext/ext-docs-5.0/apidocs/template.html#!/api/Ext.toolbar.Paging)
+	* pagingToolbar对象是分页工具栏组件,属性详解参考[Paging](http://docs.sencha.com/extjs/5.0.1/api/Ext.toolbar.Paging.html)
 	* 获取数据时.可以获得当前grid面板的分页组件的方法直接获取数据 `getTableGrid().getPagingToolbar().moveFirst()`或者执行store的刷新`getTableGrid().getStore().reload()`
 
 * 更多参考 [Extjs MVC开发模式详解](http://www.qeefee.com/article/extjs-mvc-in-detail)
