@@ -20,7 +20,7 @@
   <img src='images/package.png'/>
 </div>
 
-  >* PS : 原理请查看基础平台filter的实现原理文档
+  >* 原理请查看基础平台filter的实现原理文档
 
 # wro4j & ExtJs 压缩、合并js
 >##pom.xml的配置
