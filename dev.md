@@ -126,7 +126,7 @@
   <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-04.png?raw=true'/>
 </div>
 
-* 在`framework-server.jar`自定义的`taglib(ext.tld)`中配置了`<name>module</name>`的标签,servlet容器初始化时,初始化每个jsp的taglib,会调用指向的`tag-class`标签对应的tag处理类isPermission()函数和i18n()函数实现方法请参考`ext.tld`中相关的实现如下图
+* 在`framework-server.jar`自定义的`taglib(ext.tld)`中配置了`<name>module</name>`的标签,servlet容器初始化时,会调用指向的`tag-class`标签对应的tag处理类,isPermission()函数和i18n()函数实现方法请参考`ext.tld`中相关的实现如下图
 
 <div align = 'center' style='width:900px;'>
   <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-05.png?raw=true'/>
