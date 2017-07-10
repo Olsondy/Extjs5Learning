@@ -142,23 +142,23 @@
 * application,controller,model,store,view结构介绍(以demo为例),
 	* `application`  创建tableApp.js 作为我们程序的入口文件
 	<div align = 'center' style='width:900px;'>
-	  <img src='images/extjs-07.png'/>
+	  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-07.png?raw=true'/>
 	</div>
 	* 创建`controller` 存放作为我们的处理请求的控制器的js文件
 	<div align = 'center' style='width:900px;'>
-	  <img src='images/extjs-08.png'/>
+	  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-08.png?raw=true'/>
 	</div>
 	* 创建`store` 存放作为数据源的绑定的js文件
 	<div align = 'center' style='width:900px;'>
-	  <img src='images/extjs-09.png'/>
+	  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-09.png?raw=true'/>
 	</div>
 	* 创建`model` 存放作为数据模型映射的js文件
 	<div align = 'center' style='width:900px;'>
-	  <img src='images/extjs-10.png'/>
+	  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-10.png?raw=true'/>
 	</div>
 	* 创建`view` 存放展示界面的视图js文件
 	<div align = 'center' style='width:900px;'>
-	  <img src='images/extjs-11.png'/>
+	  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-11.png?raw=true'/>
 	</div>
 
 ## 组件介绍
