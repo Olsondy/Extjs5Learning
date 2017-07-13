@@ -509,14 +509,11 @@ img {
 <li><font color='green'>【正例】</font><br />
     <pre><code class="javascript">    Ext.define('appName.pageDir.controller.demoController', {
          statics: {
-             factory: function(brand) {
-                 // 静态方法中的'this'是指类本身
-                 return new this(brand);
-             }
+             DEMOCONSTANT:'test'
          },
          constructor: function() { ... }
     });
-    var dellComputer = appName.pageDir.controller.demoController.factory('Dell');
+    console.log(appName.pageDir.controller.demoController.DEMOCONSTANT);
 </code></pre></li>
 </ul>
 </li>
