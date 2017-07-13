@@ -254,7 +254,7 @@
 	```
 
 * <font color='orange'>【推荐】</font>&nbsp;使用ant.xml实现静态资源打包来进行js更新调试功能
-	* <font color='blue'>【说明】</font>&nbsp;在当前的module根目录下新建ant.xml,添加导入资源的配置信息,将ant.xml导入idea中的右侧ant build面板中,选中列表中的右键点击run build即可(如没有则点击左下角的面板图标,选择ant build)
+	* <font color='blue'>【说明】</font>&nbsp;在当前的module根目录下新建ant.xml,添加导入资源的配置信息,将ant.xml导入idea中的右侧ant build面板中,运行run build即可(如没有则点击左下角的面板图标,选择ant build)
 
 * <font color='green'>【正例】</font>
 	```xml
