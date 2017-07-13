@@ -127,14 +127,11 @@
 		```javascript
 			Ext.define('appName.pageDir.controller.demoController', {
 			     statics: {
-			         factory: function(brand) {
-			             // 静态方法中的'this'是指类本身
-			             return new this(brand);
-			         }
+			         DEMOCONSTANT:'test'
 			     },
 			     constructor: function() { ... }
 			});
-			var dellComputer = appName.pageDir.controller.demoController.factory('Dell');
+			console.log(appName.pageDir.controller.demoController.DEMOCONSTANT);
 		```
 
 * <font color='orange'>【推荐】</font>&nbsp;除mvc之外的类,建议养成始终用Ext.create来创建类示例的习惯,因为它允许你利用动态加载的优势.
