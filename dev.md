@@ -37,13 +37,7 @@
 ```
 
 ## 使用wro.xml压缩文件配置
-* 压缩当前scripts文件夹下的相关js
-
-<div align = 'center' style='width:600px;'>
-  <img src='https://github.com/javady/Extjs5Learning/blob/master/images/extjs-01.png?raw=true'/>
-</div>
-
-* wro.xml添加js加载地址
+* 压缩当前scripts文件夹下的相关jsß
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <groups xmlns="http://www.isdc.ro/wro"
