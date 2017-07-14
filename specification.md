@@ -87,10 +87,9 @@
 
 * <font color='purple'>【强制】</font>&nbsp;在`controller`、`model`、`store`文件夹中,新增的js文件名前缀须加上与当前模块相关名称,方便查找和维护.
 
-	* <font color='green'>【正例】</font>
-	`prefixController.js`、`prefixModel.js`、`prefixStore.js`、`prefix...Window.js`、`prefix...SearchForm.js`、`prefix...Grid.js`
+	* <font color='green'>【正例】</font>`prefixController.js`、`prefixModel.js`、`prefixStore.js`、`prefix...Window.js`、`prefix...SearchForm.js`、`prefix...Grid.js`
 
-	* <font color='red'>【反例】</font>&nbsp;`controller.js`、`model.js`、`store.js`、`list.js`、`search.js`、`grid.js`
+	* <font color='red'>【反例】</font>`controller.js`、`model.js`、`store.js`、`list.js`、`search.js`、`grid.js`
 
 ###Component、Property、Method 规约
 

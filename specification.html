@@ -300,8 +300,7 @@ img {
 </li>
 <li><a href="#_5">实践</a><ul>
 <li><a href="#development">Development</a><ul>
-<li><a href="#button">Button</a></li>
-<li><a href="#panel-form">Panel Form</a></li>
+<li><a href="#form-panel-grid-panel">Form Panel 、Grid Panel</a></li>
 <li><a href="#window">Window</a></li>
 </ul>
 </li>
@@ -419,7 +418,7 @@ img {
 <li><font color='green'>【正例】</font><br />
     <pre><code class="javascript">    - - pages
     - - scripts
-        - - pageDir  //页面模块
+        - - pageDir  //页面一
             - - controller 
                 - - prefixController.js
                     ...
@@ -437,38 +436,32 @@ img {
                         ...
                 - - ViewPort    
             - - application.js   //mvc 程序入口
-        - - twoModule    //模块二
+        - - twoModule    //页面二
                 ...
-        - - threeModule  //模块三
+        - - threeModule  //页面三
                 ...
     - - styles
 </code></pre></li>
 <li>
-<p><font color='purple'>【强制】</font>&nbsp;不同模块要在<code>scripts</code>下新增不同目录.</p>
+<p><font color='purple'>【强制】</font>&nbsp;当前模块有不同页面都要在<code>scripts</code>下新增不同页面的目录.</p>
 </li>
 <li>
 <p><font color='purple'>【强制】</font>&nbsp;在当前页面模块目录下创建<code>controller</code>、<code>store</code>、<code>model</code>、<code>view</code>目录,是mvc模式的规范.</p>
 </li>
 <li>
-<p><font color='purple'>【强制】</font>&nbsp;mvc程序入口文件<code>application</code>,建议为当前领域模块名称为前缀,如<code>prefixApp.js</code>.</p>
+<p><font color='purple'>【强制】</font>&nbsp;mvc程序入口文件<code>application.js</code>,建议为当前领域模块名称为前缀,如<code>prefixApp.js</code>,name属性值声明为当前页面名称以作为一个应用名.</p>
 </li>
 <li>
-<p><font color='purple'>【强制】</font>&nbsp;mvc程序入口文件<code>application.js</code>的name属性值声明为当前模块名称以作为一个应用名.</p>
-</li>
-<li>
-<p><font color='purple'>【强制】</font>&nbsp;view目录下,新增视图文件<code>Viewport.js</code>,名字只允许为Viewport.</p>
-</li>
-<li>
-<p><font color='purple'>【强制】</font>&nbsp;view目录下,建议目录按照不同页面模块存放视图使用js,不与<code>ViewPort.js</code>在同一层目录.</p>
+<p><font color='purple'>【强制】</font>&nbsp;view目录下,需要新增视图文件<code>Viewport.js</code>,名字只允许为Viewport,目录按照不同页面模块存放视图使用js,不与<code>ViewPort.js</code>在同一层目录.</p>
 </li>
 <li>
 <p><font color='purple'>【强制】</font>&nbsp;在<code>controller</code>、<code>model</code>、<code>store</code>文件夹中,新增的js文件名前缀须加上与当前模块相关名称,方便查找和维护.</p>
 <ul>
 <li>
-<p><font color='green'>【正例】</font>&nbsp;<code>prefixController.js</code>、<code>prefixModel.js</code>、<code>prefixStore.js</code>、<code>prefix...Window.js</code>、<code>prefix...SearchForm.js</code>、<code>prefix...Grid.js</code></p>
+<p><font color='green'>【正例】</font><code>prefixController.js</code>、<code>prefixModel.js</code>、<code>prefixStore.js</code>、<code>prefix...Window.js</code>、<code>prefix...SearchForm.js</code>、<code>prefix...Grid.js</code></p>
 </li>
 <li>
-<p><font color='red'>【反例】</font>&nbsp;<code>controller.js</code>、<code>model.js</code>、<code>store.js</code>、<code>list.js</code>、<code>search.js</code>、<code>grid.js</code></p>
+<p><font color='red'>【反例】</font><code>controller.js</code>、<code>model.js</code>、<code>store.js</code>、<code>list.js</code>、<code>search.js</code>、<code>grid.js</code></p>
 </li>
 </ul>
 </li>
@@ -492,16 +485,19 @@ img {
 </code></pre></li>
 </ul>
 </li>
-<li><font color='purple'>【强制】</font>&nbsp;自定义组件<code>componment</code>中必须声明<code>constructor</code>函数,并且在底部调用,否则无法加载.</li>
+<li><font color='purple'>【强制】</font>&nbsp;自定义组件类<code>componment</code>中必须声明<code>constructor</code>函数,并且在底部调用,否则无法加载.</li>
 </ul>
 <h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>实践</h2>
 <h3 id="development"><a name="user-content-development" href="#development" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Development</h3>
 <ul>
 <li>
-<p><font color='purple'>【强制】</font>&nbsp;代码中不允许留有<code>console.log()</code>、<code>console.info()</code>、<code>console.error()</code>类似调试代码的函数提交到git上</p>
+<p><font color='purple'>【强制】</font>&nbsp;代码中不允许留有<code>console.log()</code>、<code>console.info()</code>、<code>console.error()</code>console家族的代码以及类似调试代码的函数</p>
 </li>
 <li>
-<p><font color='purple'>【强制】</font>&nbsp;和后端做异步交互请求时,每个请求时都需要添加遮罩层,防止多次请求,或者给按钮设置不可用,获得响应后再设置为可用</p>
+<p><font color='purple'>【强制】</font>&nbsp;jsp中不允许引入js或者是调试注释的js</p>
+</li>
+<li>
+<p><font color='purple'>【强制】</font>&nbsp;和后端做异步交互请求时,每个请求都需要添加遮罩层,防止多次请求,或者给按钮设置不可用,获得响应后再设置为可用</p>
 </li>
 <li>
 <p><font color='purple'>【强制】</font>&nbsp;不要在js中添加全局变量,可以添加静态方法.</p>
@@ -540,11 +536,45 @@ img {
 </code></pre></li>
 </ul>
 </li>
+<li><font color='purple'>【强制】</font>&nbsp;<code>common.js</code>和<code>util.js</code>封装了大量的扩展组件和方法,可复用组件统一定义在<code>common.js</code>中,工具类的公用函数定义在<code>util.js</code>中</li>
 </ul>
-<h4 id="button"><a name="user-content-button" href="#button" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Button</h4>
+<h4 id="form-panel-grid-panel"><a name="user-content-form-panel-grid-panel" href="#form-panel-grid-panel" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Form Panel 、Grid Panel</h4>
 <ul>
 <li>
 <p><font color='purple'>【强制】</font>&nbsp;界面查询表单中的按钮使用<code>buttons</code>属性组件,只做重置和提供查询条件的功能,<code>curd</code> 操作按钮统一在<code>grid</code>上设定tbar组件.</p>
+</li>
+<li>
+<p><font color='purple'>【强制】</font>&nbsp;<code>formPanel</code> 中<code>textfield</code>组件的宽度只允许设定<code>columnWidth</code>,支持基本响应式功能.</p>
+</li>
+<li>
+<p><font color='purple'>【强制】</font>&nbsp;<code>formPanel</code> 统一要设置<code>defaults</code>属性对象的值,比如对齐方式,label是否带有冒号,全局的lable文字宽度,组件宽度</p>
+</li>
+<li>
+<p><font color='purple'>【强制】</font>&nbsp;获取数据字典的下拉控件,统一使用封装好的组件类型,<code>dataDictionarySelector</code> 不要在页面中自定义store的data</p>
+</li>
+<li>
+<p><font color='purple'>【强制】</font>&nbsp;<code>gridPanel</code>组件首列统一设置<code>rownumberer</code>类型的列,设置<code>default</code>的<code>align</code>属性为<code>center</code>.</p>
+</li>
+<li>
+<p><font color='purple'>【强制】</font>&nbsp;<code>gridPanel</code>组件的分页插件,都需要设置<code>displayInfo</code>的属性值为<code>true</code>,用于在右下角显示条数和总数</p>
+<ul>
+<li><font color='green'>【正例】</font><br />
+    <pre><code class="javascript">    pagingToolbar: null,
+    getPagingToolbar: function () {
+        if (this.pagingToolbar == null) {
+            this.pagingToolbar = Ext.create('Ext.toolbar.Paging', {
+                store: this.store,
+                dock: 'bottom',
+                displayInfo: true
+            });
+        }
+        return this.pagingToolbar;
+    }
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p><font color='purple'>【强制】</font>&nbsp;<code>gridPanel</code>组件的列宽也不能设置固定值,需设定<code>flex</code>属性的值支持响表格自适应.</p>
 </li>
 <li>
 <p><font color='purple'>【强制】</font>&nbsp;tbar上的按钮组<code>css3 font</code>图标一定要在图标库找到符合的图标,不能随意使用(css3图标库已经更新到最新).</p>
@@ -553,17 +583,11 @@ img {
 <p><font color='purple'>【强制】</font>&nbsp;tbar上的按钮组,需要设置成响应式按钮组.</p>
 </li>
 </ul>
-<h4 id="panel-form"><a name="user-content-panel-form" href="#panel-form" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Panel Form</h4>
-<ul>
-<li>
-<p><font color='purple'>【强制】</font>&nbsp;<code>gridPanel</code>组件的列宽也不能设置固定值,需设定<code>flex</code>属性以支持响应式.</p>
-</li>
-<li>
-<p><font color='purple'>【强制】</font>&nbsp;<code>formPanel</code> 中<code>textfield</code>组件的宽度只允许设定<code>columnWidth</code>,支持基本响应式功能.</p>
-</li>
-</ul>
 <h4 id="window"><a name="user-content-window" href="#window" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Window</h4>
 <ul>
+<li>
+<p><font color='purple'>【强制】</font>&nbsp;<code>window'的关闭模式,都统一使用</code>destory`模式(默认)</p>
+</li>
 <li>
 <p><font color='purple'>【强制】</font>&nbsp;<code>window</code>中的按钮设置要符合<code>windows</code>操作系统中的习惯操作位置来放置,[保存]在左,[取消]在右,并且在底部垂直居中.</p>
 </li>
@@ -579,10 +603,11 @@ img {
 <p><font color='green'>【正例】</font></p>
 <blockquote>
 <ul>
-<li>减少使用getCmp(id)或者get(id)方法来达到减少内存消耗的目的</li>
-<li>查询ID为container的DIV下所有的checkbox，可以使用：Ext.fly(‘container’).select(‘input【type=checkbox】’);</li>
-<li>在ID为container的DIV内创建一个按钮，可以使用：Ext.fly(‘container’).createChild({ tag: ‘input’, type: ‘button’});</li>
-<li>为ID为container的DIV的click事件注册处理函数，使用：Ext.fly(‘container’).on(‘click’, handlerFn, scope);</li>
+<li>减少使用getCmp(id)或者get(id)方法来达到减少内存消耗的目的,可以使用<code>up()</code>,<code>down()</code>,<code>widget()</code>.</li>
+<li>查询ID为container的DIV下所有的checkbox，可以使用<code>Ext.fly(‘container’).select(‘input【type=checkbox】’)</code></li>
+<li>在ID为container的DIV内创建一个按钮，可以使用<code>Ext.fly(‘container’).createChild({ tag: ‘input’, type: ‘button’})</code></li>
+<li>为ID为container的DIV的click事件注册处理函数，可以使用<code>Ext.fly(‘container’).on(‘click’, handlerFn, scope)</code></li>
+<li>操作dom可以使用,<code>Ext.query</code>,<code>Ext.DomHelper</code>,<code>Ext.DomQuery</code></li>
 </ul>
 </blockquote>
 </li>
@@ -597,13 +622,13 @@ img {
 <p><font color='blue'>【说明】</font>&nbsp;单行注释以两个斜线开始，以行尾结束.</p>
 <ul>
 <li>
-<p>单独一行：<code>//</code>(双斜线)与注释文字之间保留一个空格。</p>
+<p><font color='purple'>【强制】</font>&nbsp;单独一行：<code>//</code>(双斜线)与注释文字之间保留一个空格。</p>
 </li>
 <li>
-<p>在代码后面添加注释：<code>//</code>(双斜线)与代码之间保留一个空格，并且<code>//</code>(双斜线)与注释文字之间保留一个空格。</p>
+<p><font color='purple'>【强制】</font>&nbsp;在代码后面添加注释：<code>//</code>(双斜线)与代码之间保留一个空格，并且<code>//</code>(双斜线)与注释文字之间保留一个空格。</p>
 </li>
 <li>
-<p>注释代码：<code>//</code>(双斜线)与代码之间保留一个空格。</p>
+<p><font color='purple'>【强制】</font>&nbsp;注释代码：<code>//</code>(双斜线)与代码之间保留一个空格。</p>
 </li>
 </ul>
 </li>
@@ -645,7 +670,7 @@ img {
 <h3 id="dev-tool"><a name="user-content-dev-tool" href="#dev-tool" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dev Tool</h3>
 <ul>
 <li><font color='purple'>【强制】</font>&nbsp;所有的js文件都必须添加文件注释头<ul>
-<li>IDEA模板:打开Setting-&gt;Editor-&gt;File And Code Templates-&gt;Includes-&gt;Files,选择JavaScript File,修改文件注释头</li>
+<li>IDEA模板:打开Setting-&gt;Editor-&gt;File And Code Templates-&gt;Files,选择JavaScript File,修改文件注释头</li>
 <li><font color='green'>【正例】</font><br />
     <pre><code class="javascript">    /**
      * @description:
@@ -655,9 +680,9 @@ img {
 </code></pre></li>
 </ul>
 </li>
-<li><font color='purple'>【强制】</font>&nbsp;代码格式<ul>
+<li><font color='purple'>【强制】</font>&nbsp;代码格式化<ul>
 <li>提交代码前检验代码中是否多余空白行造成代码不规整,可读性差的问题<ul>
-<li>javascript代码都使用idea默认代码格式主题,或者在提交前,使用快捷键格式化后提交,保持代码的可读性高</li>
+<li>javascript代码都使用idea默认代码格式主题,或者在提交前,选择局部代码快捷键格式化后提交,保持代码的可读性高(不要全局格式化)</li>
 <li>Mac os  快捷键  <code>cmd</code> + <code>option</code> + <code>l</code>  (kemaps[Mac ox 10.5+])</li>
 <li>win  快捷键 <code>ctrl</code> + <code>shift</code> + <code>f</code>   (kemaps[Eclipse])</li>
 </ul>
@@ -674,7 +699,6 @@ img {
 <li><code>wro.xml</code>配置了需要使用的js文件引入,jsp中使用<code>&lt;ext:module/&gt;</code>标签定义压缩后的js文件前缀名称.在<code>wro.properties</code>文件中配置压缩的属性</li>
 <li><code>wor.xml</code>不允许引入已经被压缩过或者混淆过的mini.js文件,否则压缩后的该文件不生效</li>
 <li><code>wor.xml</code>不允许引入不被使用js提交到git上</li>
-<li>jsp中不允许引入js或者是调试注释的js提交到git上</li>
 </ul>
 </li>
 </ul>
@@ -690,11 +714,15 @@ img {
 <li>
 <p><font color='orange'>【推荐】</font>&nbsp;使用ant.xml实现静态资源打包来进行js更新调试功能</p>
 <ul>
-<li><font color='blue'>【说明】</font>&nbsp;在当前的module根目录下新建ant.xml,添加导入资源的配置信息,将ant.xml导入idea中的右侧ant build面板中,运行run build即可(如没有则点击左下角的面板图标,选择ant build)</li>
+<li><font color='blue'>【说明】</font>&nbsp;<ul>
+<li>在当前的module根目录下新建ant.xml,添加导入资源的配置信息,将ant.xml导入idea中的右侧ant build面板中,运行run build即可(如没有则点击左下角的面板图标,选择ant build)</li>
+<li>jsp中要引入需要调试的js,<code>wro.xml</code>中相应的js不能再引入(修改后的文件切勿提交到git)</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
-<p><font color='green'>【正例】</font><br />
+<p><font color='green'>【正例】</font>&nbsp;<code>ant.xml</code>配置example<br />
     <pre><code class="xml">    &lt;?xml version=&quot;1.0&quot;?&gt;
     &lt;project basedir=&quot;.&quot; name=&quot;table&quot; default=&quot;deploy&quot;&gt;  &lt;!-- name 需要修改为自己的工程名称 --&gt;
         &lt;!-- 静态资源paste目录地址,webapp下的资源访问目录 --&gt;
