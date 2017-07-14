@@ -2,5 +2,6 @@
 
 * [Introduction](README.md)
   * [examples](dev.md)
-  * [specification](specification.md)
+  * [extjs specification](specification.md)
+  * [java specification](java-specification.md)
 
