@@ -161,8 +161,6 @@
 
 * <font color='purple'>【强制】</font>&nbsp;`formPanel` 统一要设置`defaults`属性对象的值,比如对齐方式,label是否带有冒号,全局的lable文字宽度,组件宽度
 
-* <font color='purple'>【强制】</font>&nbsp;获取数据字典的下拉控件,统一使用封装好的组件类型,`dataDictionarySelector` 不要在页面中自定义store的data
-
 * <font color='purple'>【强制】</font>&nbsp;`gridPanel`组件首列统一设置`rownumberer`类型的列,设置`default`的`align`属性为`center`.
 
 * <font color='purple'>【强制】</font>&nbsp;`gridPanel`组件的分页插件,都需要设置`displayInfo`的属性值为`true`,用于在右下角显示条数和总数
@@ -180,9 +178,6 @@
 		        return this.pagingToolbar;
 		    }
 		```
-
-* <font color='purple'>【强制】</font>&nbsp;`gridPanel`组件的列宽也不能设置固定值,需设定`flex`属性的值支持响表格自适应.
-
 * <font color='purple'>【强制】</font>&nbsp;tbar上的按钮组`css3 font`图标一定要在图标库找到符合的图标,不能随意使用(css3图标库已经更新到最新).
 
 * <font color='purple'>【强制】</font>&nbsp;tbar上的按钮组,需要设置成响应式按钮组.
