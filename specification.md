@@ -28,12 +28,6 @@
 			var maxCount = 10;
 			var tableTitle = 'LoginTable';
 		```
-* <font color='red'>【反例】</font>
-		```javascript
-			var setCount = 10;
-			var getTitle = 'LoginTable';
-
-		```
 ### Function
 * <font color='purple'>【强制】</font>&nbsp;小驼峰式命名法。
 
