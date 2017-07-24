@@ -1,4 +1,4 @@
-# 前端javascript开发规范文档
+# 前端javascript开发规范文档 (extjs5)
 
 [TOC]
 
@@ -9,7 +9,7 @@
 >* 错误 & 调试
 
 ## 介绍
-* 此文档适用 Extjs5.x MVC 开发模式,开发人员通过此文档来规范开发[example文档](https://javady.gitbooks.io/extjs5-mvc-learning/content/dev.html)
+* 此文档适用 Extjs5.x MVC 开发模式,开发人员通过此文档来规范开发[extjs5 example文档](https://javady.gitbooks.io/extjs5-mvc-learning/content/dev.html)
 
 ### 特点
 * 简单易学。
@@ -51,31 +51,31 @@
 ### MVC模式的目录及文件名命名规约
 * <font color='green'>【正例】</font>
 	```javascript
-		- - pages
-		- - scripts
-			- - pageDir  //页面一
-				- - controller 
+		+- - pages
+		+- - scripts
+			+- - pageDir  //页面一
+				+- - controller 
 					- - prefixController.js
 						...
-				- - store
+				+- - store
 					- - prefixStore.js
 						...
-				- - model
+				+- - model
 					- - prefixModel.js
 						...
-				- - view  
-					- - viewFloder
-						- - prefix...Window
-						- - prefix...Form
-						- - prefix...Grid
+				+- - view  
+					+- - viewFloder
+						- - prefix...Window.js
+						- - prefix...Form.js
+						- - prefix...Grid.js
 							...
-					- - ViewPort    
+					- - Viewport.js
 				- - application.js   //mvc 程序入口
-			- - twoModule    //页面二
+			+- - twoModule    //页面二
 					...
-			- - threeModule  //页面三
+			+- - threeModule  //页面三
 					...
-		- - styles
+		+- - styles
 	```
 * <font color='purple'>【强制】</font>&nbsp;当前模块有不同页面都要在`scripts`下新增不同页面的目录.
 
